@@ -1,0 +1,13 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="secondary">
+            <ion-title>Opciones</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="irPrincipal(principal)">Ir a la pantalla principal</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>
