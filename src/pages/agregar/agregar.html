@@ -13,6 +13,20 @@
 
 
 <ion-content padding>
-
-  <button ion-button block (click)="closeModal()">Close Modal</button>
+  <form [formGroup]="myForm" (ngSubmit)="guardar(nombre, apellido)">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacked>Nombre:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder="Apellidos"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+  <button ion-button block type="submit" [disabled]="!myForm.valid" (click)="cerrarPagina()" color="danger">Guardar</button>
+  <button ion-button block (click)="cerrarPagina()" color="danger">Atrás</button>
 </ion-content>

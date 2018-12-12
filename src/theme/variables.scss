@@ -13,7 +13,8 @@ $app-direction: ltr;
 
 
 @import "ionic.globals";
-
+@import "light";
+@import "dark";
 
 // Shared Variables
 // --------------------------------------------------
@@ -21,9 +22,6 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
 
 // Named Color Variables
 // --------------------------------------------------
@@ -35,12 +33,17 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
-  secondary:  #32db64,
+  secondary:  #FE642E,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  dark-mode-night: #090f2f,
 );
 
+
+ion-content{
+  align-content: center;
+}
 
 // App iOS Variables
 // --------------------------------------------------

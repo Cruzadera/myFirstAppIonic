@@ -1,13 +1,12 @@
+
+<ion-nav [root]="rootPage" [class]="temaSeleccionado" #content></ion-nav>
 <ion-menu [content]="content">
     <ion-header>
         <ion-toolbar color="secondary">
-            <ion-title>Opciones</ion-title>
+            <ion-title>Configuración</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content>
-        <ion-list>
-            <button ion-item (click)="irPrincipal(principal)">Ir a la pantalla principal</button>
-        </ion-list>
+      <button ion-button color="dark-mode-night" (click)="toggleAppTheme()">Cambiar fondo</button>
     </ion-content>
 </ion-menu>
-<ion-nav [root]="rootPage" #content></ion-nav>

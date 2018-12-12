@@ -1,9 +1,6 @@
 
 
 export class Alumno {
-    static _id: number = 1;
-    static numFem: number = 1;
-    static numMasc: number = 1;
     public id: number;
     private _nombre: string;
     private _apellido: string;
@@ -12,12 +9,10 @@ export class Alumno {
     private _genero:boolean;
 
     constructor(nombre: string, apellido: string, curso: number) {
-        this.id = Alumno._id++; //Genero una id autoincremental con el id static
         this._nombre = nombre;
         this._apellido = apellido;
         this._curso = curso;
     }
-
 
     get nombre(): string {
         return this._nombre;
